@@ -1,0 +1,221 @@
+
+*{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+
+}
+body{
+    background-color: #099A97;
+}
+
+
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.swiper {
+    margin-top: 100px;
+    width: 900px;
+    height: 450px;
+    background-color: white;
+    border-radius: 20px;
+
+
+  }
+
+
+
+.box{
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.welcome{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    background-color: #9764C7;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    opacity: 0.9;
+    
+}
+button:hover{
+    opacity: 1;
+}
+
+button:active{
+
+        box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+       
+       
+}
+
+
+
+.disabled_swiper_button {
+    opacity: 0;
+    cursor: auto;
+    pointer-events: none;
+}
+
+.vehicles{
+    display: flex;
+    justify-content: center;    
+    gap: 50px;
+    width: 100%;
+}
+
+.cards{
+    width: 400px;
+    height: 300px;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+img{
+    opacity: 50%;
+    width:130px;
+}
+
+
+.cards button{
+    display: none;
+    margin-top: 10px;
+}
+
+.details{
+    display: none;
+}
+
+.require{
+    margin-top: 10px;
+    font-size: 12px;
+    width: 150px;
+    font-weight: 400;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.space{
+    display: flex;
+    gap: 30px;
+}
+
+input{
+    border-radius: 3px;
+    border: thin black solid;
+    height: 23px;
+    text-indent: 5px;
+}
+
+
+.results{
+    
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+    
+}
+
+nav{
+    height: 120px;
+    background-color: #099A97;
+}
+
+
+.selection{
+   margin:30px 50px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+
+.booking , .booking h1{
+    text-align: left;
+}
+
+.booking{
+    margin-top: 10px;
+}
+
+.booking-buttons{
+    margin-top: 10px;
+    display: flex;
+    gap: 30px;
+    justify-content: end;
+    align-items: center;
+
+}
+
+.booking-image{
+    opacity: 100%;
+}
+
+
+
+
+#googleMap{
+    width: 100%;
+    height: 180px;
+    position: relative;
+
+}
+
+
+.location-error{
+    display: none;
+    color: red;
+    font-weight: 500;
+}
+
+.people-error{
+    display: none;
+    color: red;
+    font-weight: 500;
+}
+
+.dates-error{
+    display: none;
+    color: red;
+    font-weight: 500;
+}
+#people{
+    width: 100px;
+}
+
+
+.vehicle-name{
+    padding-bottom: 10px;
+}
+
+

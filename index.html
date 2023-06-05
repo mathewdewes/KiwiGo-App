@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>KiwiGo rentals</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body>
+<main>
+    <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="box">
+                        <h1>Welcome to KiwiGo rentals</h1>
+                        <p>Find your vehicle today</p>
+                        <button id="start">Search</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <h1>Where do you plan to travel?</h1>
+                        <form onsubmit="return false">
+                            <div class="inputs">
+                                <div class="space">
+                                    <div>
+                                        <label for="pickUpLocation">From</label>
+                                        <input id="pickUpLocation" type="text" placeholder="Start typing city">
+                                    </div>
+                                    <div>
+
+                                        <label for="dropOffLocation">To</label>
+                                        <input id="dropOffLocation" type="text" placeholder="Start typing city">
+                                    </div>
+                                   
+                           
+                                </div>
+
+
+                                <button id="confirmLocation">Submit</button>
+                                <p class="location-error">Error: Invaid location, please re-enter</p>
+                                
+                         
+                            </div>
+                        </form>
+
+                    </div>
+
+
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <h1>How many people will be joining you?</h1>
+                        <form onsubmit="return false">
+                            <div class="inputs">
+                                <div>
+                                    <input id="people" type="number" placeholder="1-6" min="1" max="6">
+
+                                </div>
+
+
+                                <button id="confirm-people">Submit</button>
+                                <p class="people-error">Error: Please enter an amount between 1 and 6</p>
+                            </div>
+                        </form>
+
+                    </div>
+
+
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <h1>Between which dates?</h1>
+                        <form onsubmit="return false">
+                            <div class="inputs">
+                                <div class="space">
+                                    <div>
+                                        <label for="pickUpDate">Pick up</label>
+                                        <input id="pickUpDate" type="text" placeholder="Click to enter date">
+                                    </div>
+                                    <div>
+                                        <label for="dropOffDate">Drop off</label>
+                                        <input id="dropOffDate" type="text" placeholder="Click to enter date">
+                                    </div>
+                                   
+                                    
+                                </div>
+                                <p class="dates-error">Error: please enter an input</p>
+
+
+                                <button id="search">Submit</button>
+                            </div>
+                        </form>
+
+                    </div>
+
+
+                </div>
+              
+                <div class="swiper-slide">
+                    <div class="results" >
+                       
+                            <h1 class="success">Our recommendations</h1>
+                       
+                    <div id="vehicles" class="vehicles">
+                            <div class="cards">
+                                <img id="motor-bike" src="./images/motorbike.jpg" alt="">
+                                <div id="motor-bike-details" class="details">
+                                    <h3>MotorBike</h3>
+                                    <p>Price: $109/ day</p>
+                                    <p>Seats: 1</p>
+                                </div>
+                               
+                                <button class="motor-bike-button select" id="1">Select</button>
+                                <div class="unavaible" id="motor-bike-error">
+                                    <h3>Motor bike</h3>
+                                    <p>Unavailable</p>
+                                    <p class="require">Requires one rider only, with a hire duration between 1-5 days</p>
+                                  
+                                    
+                                </div>
+                              
+                            </div>
+                            <div class="cards">
+                                <img id="small-car"  src="./images/small-car.jpg" alt="">
+                                <div id="small-car-details" class="details">
+                                    <h3>Small car</h3>
+                                    <p>Price: $129/ day</p>
+                                    <p>Seats: 2</p>
+                                </div>
+                               
+                                <button class="small-car-button select" id="2">Select</button>
+                                <div class="unavaible" id="small-car-error">
+                                    <h3>Small car</h3>
+                                    <p>Unavailable</p>
+                                    <p class="require">Requires 1-2 people, with a hire duration between 1-10 days</p>
+                                  
+                                </div>
+                            </div>
+                            <div class="cards">
+                                <img id="large-car"  src="./images/large-car.jpg" alt="">
+                                <div id="large-car-details" class="details">
+                                    <h3>Large car</h3>
+                                    <p>Price: $144/ day</p>
+                                    <p>Seats: 5</p>
+                                </div>
+                              
+                                <button class="large-car-button select" id="3">Select</button>
+                                <div class="unavaible" id="large-car-error">
+                                    <h3>Large car</h3>
+                                    <p>Unavailable</p>
+                                    <p class="require">Requires 1-5 people, with a hire duration between 3-10 days</p>
+                                  
+                                </div>
+                            </div>
+                            <div class="cards">
+                                <img id="motor-home"  src="./images/motorhome.jpg" alt="">
+                                <div id="motor-home-details" class="details">
+                                    <h3>Motor home</h3>
+                                    <p>Price: $200/ day</p>
+                                    <p>Seats:6</p>
+                                </div>
+                                
+                                <button class="motor-home-button select" id="4">Select</button>
+                                <div class="unavaible" id="motor-home-error">
+                                    <h3>Motor home</h3>
+                                    <p>Unavailable</p>
+                                    <p class="require">Requires 2-6 people, with a hire duration between 2-15 days</p>
+                                  
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="swiper-slide">
+                    <div  class="selection">
+                
+                        <div id="booking-info" class="booking">
+                          
+                            
+                        </div>
+                        <div id="booking-info2" class="booking2">
+                            <div id="googleMap">
+                            </div>
+                            
+                           
+                       
+                        </div>
+                       
+                        
+
+                    </div>
+
+
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <h1>Your booking has been placed!</h1>
+                        <p>Thank you for checking out my car rental app! Feel free to checkout the source code to this project below</p>
+                        <form action="https://github.com/mathewdewes/KiwiGo-rentals">
+                            <button type="submit">View source</button>
+                        
+                        </form>
+                        <button id="return">Return</button>
+                        <p>Author Mathew Dewes</p>
+                        
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+      
+        
+
+
+    </main>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjteqZYC0m86hF5V8jOag3QfPB7EmQfwQ&libraries=places&callback=Function.prototype"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script type="module" src="./app.js"></script>
+
+</body>
+
+</html>
